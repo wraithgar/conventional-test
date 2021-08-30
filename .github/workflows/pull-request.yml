@@ -1,0 +1,17 @@
+name: Pull Request Check
+
+on: [pull_request]
+  # by default workflows are triggered only for opened, synchronize, or reopened
+  types: [opened, edited, synchronize, reopened]
+
+jobs:
+  check-title:
+    name: Check PR Title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install deps
+        run: |
+        npm i -D @commitlint/cli @commitlint/config-conventional
+      - name: Check title
+        run: |
+          echo ${{ github.event.pull_request.title}} | npx commitlint -v
