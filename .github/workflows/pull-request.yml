@@ -2,8 +2,7 @@ name: Pull Request Check
 
 on:
   pull_request:
-    # by default workflows are triggered only for opened, synchronize, or reopened
-    types: [opened, edited, synchronize, reopened]
+    types: [opened, edited]
 
 jobs:
   check-title:
@@ -14,5 +13,7 @@ jobs:
         run: |
           npm i -D @commitlint/cli @commitlint/config-conventional
       - name: Check title
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
-          echo ${{ github.event.pull_request.title}} | npx commitlint -v
+          echo $PR_TITLE | npx commitlint -x @commitlint/config-conventional -V
