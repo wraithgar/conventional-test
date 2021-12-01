@@ -14,7 +14,7 @@ jobs:
           npm i -D @commitlint/cli @commitlint/config-conventional
       - name: Check commits
         run: |
-          npx commitlint -x @commitlint/config-conventional -V --from main
+          npx commitlint -x @commitlint/config-conventional -V --from origin/main
       - name: Check title
         if: ${{ failure() }}
         env:
