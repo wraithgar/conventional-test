@@ -6,13 +6,17 @@ on:
 
 jobs:
   check-title:
-    name: Check PR Title
+    name: Check PR Title and Commits
     runs-on: ubuntu-latest
     steps:
       - name: Install deps
         run: |
           npm i -D @commitlint/cli @commitlint/config-conventional
+      - name: Check commits
+        run: |
+          npx commitlint -x @commitlint/config-conventional -V --from main
       - name: Check title
+        if: ${{ failure() }}
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
