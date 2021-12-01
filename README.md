@@ -1,3 +1,3 @@
-This is a readme
+This is a README
 
 This repo is just for testing.
