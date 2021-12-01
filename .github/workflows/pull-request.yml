@@ -9,6 +9,11 @@ jobs:
     name: Check PR Title and Commits
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: npm
       - name: Install deps
         run: |
           npm i -D @commitlint/cli @commitlint/config-conventional
