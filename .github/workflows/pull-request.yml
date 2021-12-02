@@ -24,6 +24,7 @@ jobs:
           npx commitlint -x @commitlint/config-conventional -V --from origin/main --to ${{ github.event.pull_request.head.sha }}
       - name: Check title
         if: ${{ failure() }}
+        needs: [] # be ok if Check Commits fails
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
