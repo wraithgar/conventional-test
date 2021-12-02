@@ -23,5 +23,4 @@ jobs:
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
-          npx commitlint -x @commitlint/config-conventional -V --from origin/main --to ${{ github.event.pull_request.head.sha }}
-          || echo $PR_TITLE | npx commitlint -x @commitlint/config-conventional -V
+          npx commitlint -x @commitlint/config-conventional -V --from origin/main --to ${{ github.event.pull_request.head.sha }} || echo $PR_TITLE | npx commitlint -x @commitlint/config-conventional -V
