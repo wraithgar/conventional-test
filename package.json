@@ -1,6 +1,6 @@
 {
   "name": "@gar/conventional-test",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Test repo for conventional commit automation",
   "main": "index.js",
   "scripts": {
