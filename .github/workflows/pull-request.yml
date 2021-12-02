@@ -2,7 +2,7 @@ name: Pull Request Check
 
 on:
   pull_request:
-    types: [opened, edited]
+    types: [opened, edited, synchronized]
 
 jobs:
   check-title:
