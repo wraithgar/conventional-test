@@ -5,8 +5,8 @@ on:
     types: [opened, reopened, edited, synchronize]
 
 jobs:
-  check-title:
-    name: Check PR Title and Commits
+  check:
+    name: Check PR Title or Commits
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,13 +19,9 @@ jobs:
       - name: Install deps
         run: |
           npm i -D @commitlint/cli @commitlint/config-conventional
-      - name: Check commits
-        run: |
-          npx commitlint -x @commitlint/config-conventional -V --from origin/main --to ${{ github.event.pull_request.head.sha }}
-      - name: Check title
-        if: ${{ failure() }}
-        needs: [] # be ok if Check Commits fails
+      - name: Check commits OR PR title
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
-          echo $PR_TITLE | npx commitlint -x @commitlint/config-conventional -V
+          npx commitlint -x @commitlint/config-conventional -V --from origin/main --to ${{ github.event.pull_request.head.sha }}
+          || echo $PR_TITLE | npx commitlint -x @commitlint/config-conventional -V
