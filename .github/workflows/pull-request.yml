@@ -15,11 +15,8 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
-      - name: Install deps
-        run: |
-          npm i -D @commitlint/cli @commitlint/config-conventional
       - name: Check commits OR PR title
         env:
           PR_TITLE: ${{ github.event.pull_request.title }}
         run: |
-          npx commitlint -x @commitlint/config-conventional -V --from origin/main --to ${{ github.event.pull_request.head.sha }} || echo $PR_TITLE | npx commitlint -x @commitlint/config-conventional -V
+          npx -y -p @commitlint/cli -p @commitlint/config-conventional -c 'commitlint -x @commitlint/config-conventional -V --from origin/main --to ${{ github.event.pull_request.head.sha }} || echo $PR_TITLE | commitlint -x @commitlint/config-conventional -V'
