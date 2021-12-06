@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/wraithgar/conventional-test/compare/v1.3.0...v1.4.0) (2021-12-06)
+
+
+### Features
+
+* add fritzy and nlf ([#19](https://www.github.com/wraithgar/conventional-test/issues/19)) ([53b516c](https://www.github.com/wraithgar/conventional-test/commit/53b516cd586b0ef3a4f7a402561a02e96e3c35b2))
+
 ## [1.3.0](https://www.github.com/wraithgar/conventional-test/compare/v1.2.0...v1.3.0) (2021-12-06)
 
 
