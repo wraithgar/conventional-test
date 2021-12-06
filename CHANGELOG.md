@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://www.github.com/wraithgar/conventional-test/compare/v1.2.0...v1.3.0) (2021-12-06)
+
+
+### Features
+
+* periodic npm audit ([2171011](https://www.github.com/wraithgar/conventional-test/commit/2171011c328409b45a9608252e7a545d1598cffe))
+
 ## [1.2.0](https://www.github.com/wraithgar/conventional-test/compare/v1.1.0...v1.2.0) (2021-12-06)
 
 
