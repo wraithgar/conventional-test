@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/wraithgar/conventional-test/compare/v1.1.0...v1.2.0) (2021-12-06)
+
+
+### Features
+
+* add .dependabot.yml ([b75c7d0](https://www.github.com/wraithgar/conventional-test/commit/b75c7d01f3a324a3439bd8304c0cc868007c8750))
+
+
+### Bug Fixes
+
+* .gitignore package-lock.json ([da95ce1](https://www.github.com/wraithgar/conventional-test/commit/da95ce1bf857c31cdc6c257a3035e730193fa99a))
+* can't cache npm with no lockfile ([1cd7cca](https://www.github.com/wraithgar/conventional-test/commit/1cd7cca12bef101e9524b2c83ccec4e8869f02d0))
+* remove package-lock.json ([6e9e5ca](https://www.github.com/wraithgar/conventional-test/commit/6e9e5ca188c877ce620eaf34a722d949a91ab358))
+
 ## [1.1.0](https://www.github.com/wraithgar/conventional-test/compare/v1.0.0...v1.1.0) (2021-12-02)
 
 
