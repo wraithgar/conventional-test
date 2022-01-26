@@ -6,9 +6,22 @@ updates:
     interval: daily
   allow:
     - dependency-type: direct
+  ignore:
+    - dependency-name: "@gar/npm-registry-test"
   versioning-strategy: increase-if-necessary
   commit-message:
     prefix: deps
     prefix-development: chore
+  labels:
+    - "dependencies"
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  allow:
+    - dependency-name: "@gar/npm-registry-test"
+  versioning-strategy: increase
+  commit-message:
+    prefix: chore
   labels:
     - "dependencies"
