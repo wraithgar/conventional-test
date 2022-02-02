@@ -4,7 +4,7 @@ name: "Post Dependabot Install"
 
 on:
   pull_request:
-    branches: [ "dependabot/*" ]
+    branches: [ "dependabot/**" ]
 
 
 jobs:
