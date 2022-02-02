@@ -1,5 +1,20 @@
 # Changelog
 
+### [1.5.1](https://www.github.com/wraithgar/conventional-test/compare/v1.5.0...v1.5.1) (2022-02-02)
+
+
+### Bug Fixes
+
+* add post dependabot install workflow ([f76f9f2](https://www.github.com/wraithgar/conventional-test/commit/f76f9f24228ba431c23f239ac1afacd54a8622f6))
+* iterating on git install workflow ([54f0381](https://www.github.com/wraithgar/conventional-test/commit/54f03814c64d06e0bf87f5f93714e8ccbd9a38b9))
+* proper wildcard for dependabot pr branch ([e8d2a0b](https://www.github.com/wraithgar/conventional-test/commit/e8d2a0b125a5f57739bf52e6ac94d9eb3a797165))
+* use suggested filter for post dependabot pr ([5b182f1](https://www.github.com/wraithgar/conventional-test/commit/5b182f14f51d1bc65897cbe5f0fffeba20c22f6f))
+
+
+### dependencies
+
+* @gar/npm-registry-test ([8b2aebb](https://www.github.com/wraithgar/conventional-test/commit/8b2aebb9b83b1f30a463c162467102eb81f5daea))
+
 ## [1.5.0](https://www.github.com/wraithgar/conventional-test/compare/v1.4.0...v1.5.0) (2022-02-02)
 
 
