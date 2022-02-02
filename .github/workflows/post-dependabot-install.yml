@@ -4,12 +4,13 @@ name: "Post Dependabot Install"
 
 
 on:
-  pull_request
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   Install:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
+    # if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
@@ -17,6 +18,10 @@ jobs:
           node-version: '16'
       - name: Install deps
         run: npm i
+      - name: Configure git
+        run: |
+          git config --local user.email "ops+npm-cli@npmjs.com"
+          git config --local user.name "npm cli ops bot"
       - name: Dummy change
         run: echo ${{github.ref_name}} > new_file.txt
       - name: Dummy add
