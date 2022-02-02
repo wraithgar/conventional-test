@@ -1,0 +1,28 @@
+# This file is automatically added by @npmcli/template-oss. Do not edit.
+
+name: "Post Dependabot Install"
+
+on:
+  pull_request:
+    branches: [ "dependabot/*" ]
+
+
+jobs:
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install deps
+        run: npm i
+      - name: Dummy change
+        run: echo ${{github.ref_name}} > new_file.txt
+      - name: Dummy add
+        run: git add new_file.txt
+      - name: Commit changes
+        run: |
+          git commit -am 'chore: postinstall for dependabot PR'
+      - name: Push changes
+        run: git push origin ${{github.ref_name}}
