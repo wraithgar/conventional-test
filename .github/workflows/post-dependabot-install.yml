@@ -2,14 +2,14 @@
 
 name: "Post Dependabot Install"
 
-on:
-  pull_request:
-    branches: [ "dependabot/**" ]
 
+on:
+  pull_request
 
 jobs:
   Install:
     runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
