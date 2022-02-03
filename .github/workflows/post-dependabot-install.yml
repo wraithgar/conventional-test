@@ -6,7 +6,7 @@ on:
 jobs:
   Install:
     runs-on: ubuntu-latest
-    if: ${{ github.actor == 'wraithgar' }}
+    # if: ${{ github.actor == 'wraithgar' }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
