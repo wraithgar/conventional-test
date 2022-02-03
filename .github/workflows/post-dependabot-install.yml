@@ -18,7 +18,7 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: npm install and commit
-        if: ${{contains(steps.dependabot-metadata.outputs.dependency-names, '@gar/npm-registry-test')}}
+        if: ${{contains(steps.metadata.outputs.dependency-names, '@gar/npm-registry-test')}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
