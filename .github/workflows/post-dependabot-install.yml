@@ -16,7 +16,7 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
       - name: npm install and commit
-        if: ${{contains(steps.dependabot-metadata.outputs.dependency-names, '@npmcli/template-oss')}}
+        if: ${{contains(steps.dependabot-metadata.outputs.dependency-names, '@gar/npm-registry-test')}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
