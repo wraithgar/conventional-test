@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - bob/**
+      - workspaces/hello/**
 
 jobs:
   release-please:
@@ -14,8 +14,9 @@ jobs:
       - uses: google-github-actions/release-please-action@v2
         id: release
         with:
+          monorepo-tags: true
           package-name: conventional-test
-          path: bob
+          path: workspaces/hello
           release-type: node
           changelog-types: >
             [{"type":"feat","section":"Features","hidden":false},

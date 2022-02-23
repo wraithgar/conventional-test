@@ -18,6 +18,7 @@
   },
   "workspaces": [
     "bob",
-    "vila"
+    "vila",
+    "workspaces/hello"
   ]
 }
