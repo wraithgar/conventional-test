@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - bob/**
 
 jobs:
   release-please:
@@ -14,6 +16,9 @@ jobs:
         with:
           package-name: conventional-test
           release-type: node
+          path: bob
+          monorepo-tags: bob
+          changelog-path: bob
           changelog-types: >
             [{"type":"feat","section":"Features","hidden":false},
             {"type":"fix","section":"Bug Fixes","hidden":false},
