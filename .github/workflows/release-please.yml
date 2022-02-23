@@ -14,11 +14,11 @@ jobs:
       - uses: google-github-actions/release-please-action@v2
         id: release
         with:
-          package-name: conventional-test
-          release-type: node
-          path: bob
-          monorepo-tags: bob
           changelog-path: bob
+          monorepo-tags: true
+          package-name: conventional-test
+          path: bob
+          release-type: node
           changelog-types: >
             [{"type":"feat","section":"Features","hidden":false},
             {"type":"fix","section":"Bug Fixes","hidden":false},
