@@ -1,0 +1,21 @@
+{
+  "name": "vila",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wraithgar/conventional-test.git"
+  },
+  "keywords": [],
+  "author": "Gar <gar+npm@danger.computer>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wraithgar/conventional-test/issues"
+  },
+  "homepage": "https://github.com/wraithgar/conventional-test#readme"
+}
