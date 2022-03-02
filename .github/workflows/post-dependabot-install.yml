@@ -20,5 +20,6 @@ jobs:
           git config --local user.name "npm cli ops bot"
           gh pr checkout ${{ github.event.pull_request.number }}
           date > date.txt
+          git add date.txt
           git commit -am "set date"
           git push
