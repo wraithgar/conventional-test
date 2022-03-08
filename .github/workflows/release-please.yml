@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - workspaces/scoped/**
+      - workspaces/scope/**
 
 jobs:
   release-please:
@@ -16,7 +16,7 @@ jobs:
         with:
           release-type: node
           monorepo-tags: true
-          path: workspaces/scoped
+          path: workspaces/scope
           changelog-types: >
             [{"type":"feat","section":"Features","hidden":false},
             {"type":"fix","section":"Bug Fixes","hidden":false},
