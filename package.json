@@ -19,6 +19,7 @@
   "workspaces": [
     "bob",
     "vila",
-    "workspaces/hello"
+    "workspaces/hello",
+    "workspaces/scope"
   ]
 }
