@@ -9,7 +9,7 @@
   "author": "Gar <gar+npm@danger.computer>",
   "license": "ISC",
   "dependencies": {
-    "abbrev": "1.0.3"
+    "abbrev": "2.0.0"
   },
   "workspaces": [
     "bob",
